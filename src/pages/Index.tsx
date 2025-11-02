@@ -1,11 +1,20 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Navigation } from "@/components/Navigation";
+import { Sidebar } from "@/components/Sidebar";
+import { MarketHeader } from "@/components/MarketHeader";
+import { ChartArea } from "@/components/ChartArea";
+import { OrderBook } from "@/components/OrderBook";
+import { TradingPanel } from "@/components/TradingPanel";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="h-screen bg-background flex flex-col overflow-hidden">
+      <Navigation />
+      <MarketHeader />
+      <div className="flex-1 flex overflow-hidden">
+        <Sidebar />
+        <ChartArea />
+        <OrderBook />
+        <TradingPanel />
       </div>
     </div>
   );
